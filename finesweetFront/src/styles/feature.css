@@ -1,0 +1,14 @@
+.feature {
+    width: 385px;
+    height: 105px;
+    margin-top: 45px;
+    display: flex;
+}
+
+.feature-text-wrapper {
+    margin-left: 27px;
+}
+
+.text-feature {
+    margin-top: 8px;
+}

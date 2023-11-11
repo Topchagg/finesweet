@@ -1,0 +1,20 @@
+.home-open-section {
+    height: 640px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.title-info-wrapper {
+    width: 500px;
+    height: 500px;
+}
+
+.title-wrapper {
+    height: 225px;
+}
+
+.info-wrapper {
+    margin-top: 160px;
+    width: 260px;
+}
+

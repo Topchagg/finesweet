@@ -1,0 +1,35 @@
+.header{
+    height: 100px;
+}
+
+.header-nav-section{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo-wrapper{
+    margin-top: 10px;
+}
+
+.nav-items-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 440px;
+    margin-top: 35px;
+    height: 100%;
+}
+
+.nav__item {
+    cursor: pointer;
+    transition: 400ms;
+} 
+
+.nav__item:hover {
+    color: red;
+    font-size: 20px;
+}  
+
+.contact-info {
+    margin-top: 25px;
+}

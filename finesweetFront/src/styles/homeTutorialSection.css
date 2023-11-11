@@ -1,0 +1,30 @@
+.tutorial-section {
+    height: 530px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.process-info-wrapper {
+    width: 500px;
+}
+
+.text-process-info {
+    color: gray;
+    margin-top: 35px;
+    width: 400px;
+}
+
+.process-btn-wrapper {
+    margin-top: 40px;   
+}
+
+.step {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.small-text-step {
+    margin-top: 10px;
+    color: gray;
+    width: 300px;
+}

@@ -1,0 +1,19 @@
+.orange-btn {
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    background-color: rgba(255, 100, 51, 1);
+    transition:  500ms;
+    width: 150px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+}
+
+.orange-btn:hover {
+    background-color: black;
+    font-size: 20px;
+    color: rgba(255, 100, 51, 1);
+    border: none;
+    border-radius: 15px;
+}

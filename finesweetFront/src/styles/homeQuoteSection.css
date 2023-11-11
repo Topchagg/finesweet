@@ -1,0 +1,47 @@
+.home-quote-section {
+    height: 900px;
+}
+
+.info-form-wrapper {
+    margin-top: 130px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.info-wrapper {
+    width: 590px;
+    height: 700px;
+}
+
+
+.arrow-wrapper {    
+    display: flex;
+    margin-left: 85px;
+}
+
+.arrow {
+    margin-top: 2px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.title-form-wrapper {
+    width: 490px;
+}
+
+.input-form-wrapper {
+    margin-top: 40px;
+}
+
+.form-wrapper {
+    width: 630px;
+}
+
+.quote-info-wrapper {
+    width: 560px;
+}
+
+.btn-quote-wrapper {
+    margin-top: 40px;
+}
+

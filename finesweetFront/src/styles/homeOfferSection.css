@@ -1,0 +1,18 @@
+.home-offer-section {
+    height: 800px;
+}
+
+.offer-title-wrapper {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 780px;
+}
+
+.services-wrapper {
+    margin: 0 auto;
+    margin-top: 55px;
+    width: 80%; 
+    height: 500px;
+    border: solid red 1px;
+}
