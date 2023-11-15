@@ -18,9 +18,9 @@ function HomeTutorialSection() {
                 </div>
             </div>
             <div className="step-by-step-info-wrapper">
-                <Step numeric={1} title={"Get a Quote"} text={"Through True Rich Attended does no end it his mother since real had half every."} />
-                <Step numeric={2} title={"Book an Appointment"} text={"Through True Rich Attended does no end it his mother since real had half every."}  />
-                <Step numeric={3} title={"Get your Service Done"} text={"Through True Rich Attended does no end it his mother since real had half every."} />
+                <Step link={'/contact'} numeric={1} title={"Get a Quote"} text={"Through True Rich Attended does no end it his mother since real had half every."} />
+                <Step link={'/services'} numeric={2} title={"Book an Appointment"} text={"Through True Rich Attended does no end it his mother since real had half every."}  />
+                <Step link={'/'} numeric={3} title={"Get your Service Done"} text={"Through True Rich Attended does no end it his mother since real had half every."} />
             </div>
         </div>
     )

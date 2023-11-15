@@ -1,0 +1,30 @@
+.banner-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 502px;
+    overflow: hidden;
+}
+
+.banner-img {
+    height: 502px;
+    overflow: hidden;
+
+}
+
+.get-touch-block {
+    height: 502px;
+    background-color: rgba(255, 100, 51, 1);
+}
+
+.banner-title-wrapper {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 130px;
+    width: 550px;
+    color: white;
+}
+
+.banner-btn-wrapper {
+    margin-top: 40px;
+    margin-left: 120px;
+}

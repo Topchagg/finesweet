@@ -1,0 +1,42 @@
+.page-section {
+    padding-top: 100px;
+}
+
+.contact-page {
+    padding-top: 140px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-input-title-wrapper {
+    width: 480px;
+}
+
+.contact-btn-wrapper {
+    margin-top: 50px;
+}
+
+.form-item-wrapper {
+    margin-top: 30px;
+}
+
+.contact-info-wrapper-page {
+    margin-top: 140px;
+}
+
+.contact-info-item-page {
+    margin-top: 30px;
+    color: black;
+}
+
+.map__container {
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+}
+
+.map {
+    width: 90%;
+    height: 100%;
+}

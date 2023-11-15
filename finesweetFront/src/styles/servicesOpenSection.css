@@ -1,0 +1,38 @@
+.services-open-section {
+    height: 550px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    overflow-x: hidden;
+}
+
+.services-info-block-wrapper {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-img-wrapper {
+    width: 900px;
+    overflow: hidden;
+}
+
+.service-content-block {
+    height: 300px;
+    width: 500px;
+}
+
+.services-title-wrapper {
+    color: white;
+}
+
+.services-text-wrapper {
+    color: white;
+    margin-top: 20px;
+}
+
+.services-btn-wrapper {
+    margin-top: 50px;
+}

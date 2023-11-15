@@ -1,0 +1,53 @@
+.services-how-we-work {
+    height: 1100px;
+}
+
+.how-we-work-wrapper {
+    display: flex;
+    height: 480px;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.how-we-work-title {
+    text-align: center;
+    width: 440px;
+}
+
+.how-we-work-step {
+    display: flex;
+    margin-top: 40px;
+}
+
+.how-we-work-text {
+    width: 400px;
+    margin-left: 10px;
+}
+
+.how-we-work-step-img {
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.service-example-wrapper {
+    margin: 0 auto;
+    margin-top: 70px;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    height: 485px;
+}
+
+.service-example-info {
+    margin-left: 50px;
+}
+
+.service-example-btn-wrapper {
+    margin-top: 50px;
+}
+
+.service-example-text {
+    margin-top: 40px;
+}

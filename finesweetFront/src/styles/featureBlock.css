@@ -1,0 +1,18 @@
+.feature-block {
+    width: 300px;
+}
+
+.feature-block-img-wrapper {
+    width: 60px;
+    margin: 0 auto;
+}
+
+.feature-block-title {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.feature-block-text {
+    text-align: center;
+    margin-top: 10px;
+}

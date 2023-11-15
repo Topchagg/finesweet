@@ -1,0 +1,13 @@
+.home-info-section {
+    height: 240px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.info__item {
+    margin-top: 60px;
+}
+
+.title-info-item {
+    color: rgba(102, 28, 231, 1);
+}

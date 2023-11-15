@@ -1,0 +1,16 @@
+.brands-info-section {
+    height: 620px;
+}
+
+.brands-info-tittle-wrapper {
+    margin: 0 auto;
+    width: 360px;
+}
+
+.brands-wrapper {
+    width: 80%;
+    height: 70%;
+    margin: 0 auto;
+    margin-top: 50px;
+    border: solid 1px red;
+}

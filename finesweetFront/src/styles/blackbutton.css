@@ -1,0 +1,21 @@
+.black-btn {
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    background-color: black;
+    transition:  500ms;
+    width: 150px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+}
+
+.black-btn:hover {
+    background-color: rgba(255, 100, 51, 1);
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    border: none;
+    border-radius: 15px;
+    border: solid black 1px;
+}

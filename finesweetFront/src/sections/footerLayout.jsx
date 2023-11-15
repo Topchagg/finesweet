@@ -39,23 +39,6 @@ function FooterLayout () {
                         </div>
                     </div>
                 </div>
-                <div className="nav-footer">
-                    <div className="footer-nav-section black-color">
-                        <div className="logo-wrapper header-one">
-                            finSweet!
-                        </div>
-                        <div className="nav-items-wrapper">
-                            <div className="nav__item body-text-big">Home</div>
-                            <div className="nav__item body-text-big">About us</div>
-                            <div className="nav__item body-text-big">Services</div>
-                            <div className="nav__item body-text-big">Blog</div>
-                            <div className="nav__item body-text-big">Contact</div>
-                        </div>
-                        <div className="copyrights caption">
-                            @ Copyright Finsweet 2021    
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     )

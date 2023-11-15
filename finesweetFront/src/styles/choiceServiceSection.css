@@ -1,0 +1,44 @@
+.choice-service-section {
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice-service-content-block {
+    width: 80%;
+    height: 80%;
+    display: flex;
+}
+
+.info-about-service-wrapper {
+    height: 100%;
+    width: 550px;
+}
+
+.info-service-img-wrapper {
+    height: 300px;
+    overflow: hidden;
+}
+
+.name-of-service {
+    margin-top: 15px;
+}
+
+.tittle-description-service {
+    margin-top: 20px;
+    width: 400px;
+}
+
+.service-arrow-wrapper {
+    margin-top: 25px;
+    display: flex;
+}
+
+.other-service-block {
+    width: 400px;
+    height: 80%;
+    border: solid purple 3px;
+    padding: 50px;
+    display: flex;
+}

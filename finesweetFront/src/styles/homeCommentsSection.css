@@ -1,0 +1,41 @@
+.home-comment-section {
+    height: 740px;
+    text-align: center;
+}
+
+.comment-section-title {
+    width: 700px;
+    margin: 0 auto;
+    margin-top: 130px;
+}
+
+.comments-block-wrapper {
+    margin-top: 50px;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.carousel-wrapper {
+    width: 100%;
+}
+
+.buttons-wrapper {
+    cursor: pointer;
+    margin: 0 auto;
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+    font-weight: 800;
+}
+
+.carousel-btn {
+    font-size: 24px;
+    transition: 400ms;
+    user-select: none;
+}
+
+.carousel-btn:active {
+    font-size: 20px;
+}

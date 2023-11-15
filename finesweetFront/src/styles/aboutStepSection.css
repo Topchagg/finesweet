@@ -1,0 +1,24 @@
+.about-step-section  {
+    height: 800px;
+    display: flex;
+    padding: px;
+    overflow: hidden;
+}
+
+.how-we-provide-title-wrapper {
+    width: 600px;
+}
+
+.how-we-provide-text-wrapper {
+    margin-top: 40px;
+    width: 400px;
+}
+
+.how-we-provide-steps-wrapper {
+    width: 400px;
+}
+
+.how-we-provide-img-wrapper {
+    height: 85%;
+    overflow: hidden;
+}

@@ -1,19 +1,25 @@
 * {
     padding: 0;
     margin: 0;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
 }
 
 .section-margin {
-    margin-top: 100px;
+    margin-top: 140px;
 }
 
 .content__container {
     width: 1290px;
-    border: solid black 2px;
 }
 
 .steele-background{
     background-color: rgba(226, 230, 233, 1);
+}
+
+.black-background {
+    background-color: black;
 }
 
 .section {

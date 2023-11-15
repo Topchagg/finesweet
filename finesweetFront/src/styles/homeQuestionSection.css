@@ -1,0 +1,15 @@
+.home-question-section {
+    height: 100%;
+    padding: 100px;
+}
+
+.home-question-title {
+    text-align: center;
+}
+
+.question-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}

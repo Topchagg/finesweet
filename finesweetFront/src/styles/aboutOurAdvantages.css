@@ -1,0 +1,57 @@
+.advantages-wrapper {
+    width: 100%;
+    height: 450px;
+    display: flex;
+}
+
+.advantage {
+    width: 33.33%;
+    height: 100%;
+    background-position: center;
+}
+
+.delivery {
+    background-image: url('steps-do.png');
+}
+
+.delivery-info-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(248, 91, 41, 0.8);
+}
+
+.advantage-info-title {
+    color: white;
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.advantage-info-text {
+    width: 400px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.technology {
+    background-image: url('bannerimgs.png');
+}
+
+.technology-info-wrapper {
+    background-color: black;
+}
+
+.advantage-info {
+    height: 100%;
+    opacity: 0.9;
+}
+
+.loyal {
+    background-image: url('how-work.png');
+}
+
+.loyal-info-wrapper {
+    background-color: rgba(116, 67, 202, 0.9);
+}

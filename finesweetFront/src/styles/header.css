@@ -1,5 +1,9 @@
 .header{
-    height: 100px;
+    height: 72px;
+    position: fixed;
+    border: solid white 2px;
+    top: 0;
+    z-index: 2;
 }
 
 .header-nav-section{
@@ -19,6 +23,9 @@
     margin-top: 35px;
     height: 100%;
 }
+
+
+
 
 .nav__item {
     cursor: pointer;
