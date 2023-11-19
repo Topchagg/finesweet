@@ -50,7 +50,7 @@ function HomePage(){
                 <HomeCommentSection/>
             </div>
         </div>
-        <div className="section steele-background section-margin">
+        <div className="section steele-background ">
             <div className="content__container">
                 <HomeQuestionSection/>
             </div>

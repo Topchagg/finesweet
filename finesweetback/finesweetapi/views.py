@@ -1,3 +1,34 @@
 from django.shortcuts import render
+from rest_framework.response import Response
+from rest_framework import status
+from rest_framework.pagination import PageNumberPagination
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
+from rest_framework.viewsets import ModelViewSet
 
-# Create your views here.
+from .models import *
+from .serializers import *
+
+
+
+class ServicesViewSet(ModelViewSet):
+    queryset = Services.objects.all()
+    serializer_class = SerializeService
+
+
+# class PreviewServicesViewSet(ModelViewSet):
+#     queryset = ServicesPreview.objects.all()
+#     serializer_class = SerializeServicePreview
+
+class FrequentlyQuestionViewSet(ModelViewSet):
+    queryset = FrequentlyQuestion.objects.all()
+    serializer_class = SerializeFrequentlyQuestions
+
+
+class EmployeeViewSet(ModelViewSet):
+    queryset = Employee
+    serializer_class = SerializeEmployee
+
+class ContactViewSet(ModelViewSet):
+    queryset = ContactRequest
+    serializer_class = SerializeContactRequest
+    

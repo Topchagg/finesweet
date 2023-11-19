@@ -1,6 +1,7 @@
 
 import Feature from '../components/feature'
 import OrangeBtn from '../components/orangeButton'
+import RequestForm from '../components/requestForm'
 
 import '../styles/homeQuoteSection.css'
 
@@ -27,12 +28,7 @@ function HomeQuoteSection() {
                             If u need help we can recall you!
                         </div>
                         <div className="input-form-wrapper">
-                            <form action="">
-                                <input className='white-input' type="text" placeholder='Enter your name' />
-                                <input className='white-input' type="text" placeholder='Enter your lastname' />
-                                <input className='white-input' type="text" placeholder='Enter your phonenumber' />
-                                <input className='white-input' type="text" placeholder='Enter your email  (Optional)' />
-                            </form>
+                        <RequestForm/>
                             <div className="btn-quote-wrapper">
                                     <OrangeBtn text={'Contact with me'}/>
                             </div>

@@ -6,12 +6,17 @@
     box-sizing: border-box;
 }
 
+/* .center {
+    margin-left: 0 auto;
+} */
+
 .section-margin {
     margin-top: 140px;
 }
 
 .content__container {
     width: 1290px;
+    overflow: hidden;
 }
 
 .steele-background{
@@ -68,15 +73,34 @@
 .white-input {
     padding-left: 25px;
     width: 570px;
-    height: 50px;
     font-size: 24px;
     outline: none;
     border: none;
     background-color: white;
     color: gray;
     margin-top: 8px;
+    height: auto;
+    text-align: center;
 }
 
 .black-color {
     background-color: black;
+}
+
+.btn-wrapper {
+    width: 150px;
+}
+
+.buttons-wrapper {
+    display: flex;
+}
+
+.input-item {
+    margin-top: 20px;   
+}
+
+.text-area {
+    outline: none;
+    border: none;
+    text-align: center;
 }
