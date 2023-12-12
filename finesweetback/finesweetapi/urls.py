@@ -24,5 +24,9 @@ urlpatterns = [
 
     path('contact-get-all', ContactViewSet.as_view({'get':'list'})),
     path('contact-destroy/<int:pk>', ContactViewSet.as_view({'delete':'destroy'})),
-    path('contact-request-create', ContactViewSet.as_view({'post':'create'}))
+    path('contact-request-create', ContactViewSet.as_view({'post':'create'})),
+
+    path('get-all-brands', BrandsViewSet.as_view({'get':'list'})),
+    path('brand-destroy/<int:pk>', BrandsViewSet.as_view({'delete':'destroy'})),
+    path('create-brand', BrandsViewSet.as_view({'post':'create'}))
 ]

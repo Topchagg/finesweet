@@ -13,8 +13,7 @@ class ContactRequest(models.Model):
     
         fullname = models.CharField(max_length=90)
         phoneNumber = models.CharField(max_length=10)
-        email = models.CharField(max_length=100,blank=True)
-        message = models.CharField(max_length=200,blank=True)
+        message = models.CharField(max_length=300,blank=True)
 
 class Services(models.Model):
       
@@ -50,6 +49,7 @@ class Employee(models.Model):
 class Brands(models.Model):
 
       icon = models.URLField()
+      name = models.CharField(max_length=9)
       
 
       

@@ -15,9 +15,6 @@ function ContactPage() {
                             Get in touch with our experts
                         </div>
                             <RequestForm/>
-                        <div className="contact-btn-wrapper">
-                            <OrangeBtn text={"Send message"} />
-                        </div>
                     </div>
                     <div className="contact-info-wrapper-page">
                     <div className="contact-info-item-page">

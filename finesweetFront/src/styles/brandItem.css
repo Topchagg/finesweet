@@ -1,0 +1,17 @@
+.brand-item-wrapper {
+    width: 120px;
+    height: 120px;
+}
+
+.brand-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.name-of-brand-wrapper {
+    text-align: center;
+    margin-top: 5px;    
+}

@@ -28,12 +28,46 @@ export const fineSweetApi = createApi({
               body: data,
             }),
         }),
-        // createContactRequest: build.mutation({
-        //     query: (body) => ({
-        //         url: 'frequently-create'
-        //     })
-        // })
-    })  
+        createContactRequest: build.mutation({
+            query: (data) => ({
+                url: 'contact-request-create',
+                method: "POST",
+                body: data,
+            })
+        }),
+        createServBrand: build.mutation({
+            query: (data) => ({
+                url: 'create-brand',
+                method: "POST",
+                body: data,
+            })
+        }),
+        getAllServBrand: build.query({
+            query: () => "get-all-brands"
+        }),
+        createEmployeeBlock: build.mutation({
+            query: (data) => ({
+                url: "employee-create",
+                method: "POST",
+                body: data
+            })
+        }),
+        deleteServBrand: build.mutation({
+            query: (id) => ({
+                url: `brand-destroy/${id}`,
+                method: 'DELETE'
+            })
+        }),
+        getAllEmployeeBlock: build.query({
+            query: () => "employee-get-all"
+        }),
+        deleteEmployeeBlock: build.mutation({
+            query: (id) => ({
+                url: `employee-destroy/${id}`,
+                method: 'DELETE'
+            })
+        }),
+    }) 
 })
 
-export const {useGetQuestionsQuery, useAddQuestionMutation, useDeleteQuestionMutation, useUpdateQuestionMutation} = fineSweetApi
+export const { useDeleteServBrandMutation,useGetAllServBrandQuery,useDeleteEmployeeBlockMutation , useGetAllEmployeeBlockQuery , useCreateEmployeeBlockMutation ,useGetQuestionsQuery, useAddQuestionMutation, useDeleteQuestionMutation, useUpdateQuestionMutation, useCreateContactRequestMutation, useCreateServBrandMutation} = fineSweetApi

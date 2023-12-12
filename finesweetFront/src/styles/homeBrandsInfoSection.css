@@ -1,5 +1,5 @@
 .brands-info-section {
-    height: 620px;
+    padding: 100px;
 }
 
 .brands-info-tittle-wrapper {
@@ -8,9 +8,22 @@
 }
 
 .brands-wrapper {
-    width: 80%;
-    height: 70%;
+    display: grid;
+    margin-top: 40px;
+    grid-template-columns: repeat(5, 22%);
+    grid-auto-rows: 50px;
+    row-gap: 100px;
+}
+
+.brands-form-wrapper {
     margin: 0 auto;
-    margin-top: 50px;
-    border: solid 1px red;
+    width: 575px;
+}
+
+.brands-btn-wrapper {
+    margin-left: 90px;
+}
+
+.wrapper {
+    margin-top: 10px;
 }

@@ -40,12 +40,12 @@ function HomePage(){
                 <HomeInfoSection/>
             </div>
         </div>
-        <div className="section section-margin">
+        <div className="section steele-background">
             <div className="content__container">
                 <HomeBrandsInfoSection/>
             </div>
         </div>
-        <div className="section steele-background section-margin">
+        <div className="section steele-background">
             <div className="content__container">
                 <HomeCommentSection/>
             </div>

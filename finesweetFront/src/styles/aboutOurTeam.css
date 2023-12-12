@@ -6,6 +6,41 @@
     text-align: center;
 }
 
-.employes-wrapper {
-    height: 1000px;
+.is-creating-employee-block-wrapper {  
+    border: solid gray 3px;
+    border-radius: 50px;
+    background-color: lightgray;
+}
+
+.form-wrapper {
+    margin: 0 auto;
+}
+
+.input-file-item-wrapper {
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.carousel-wrapper {
+    position: relative;
+  }
+  
+.slick-arrow {
+    position: absolute;
+    top: 110%;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.slick-arrow:active {
+   font-size: 20px;
+}
+  
+.custom-prev-arrow {
+    left: 45%;
+}
+  
+.custom-next-arrow {
+    right: 45%;
 }

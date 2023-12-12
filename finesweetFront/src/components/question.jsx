@@ -6,6 +6,7 @@ import { validate, handleDecline } from '../validation'
 
 import OrangeBtn from './orangeButton'
 import BlackButton from './blacButton'
+import Inputitem from './inputItem'
 
 import '../styles/question.css'
 
@@ -80,33 +81,30 @@ function Question(props) {
             </div>
             <AnimatePresence>
             {show && 
-                <motion.div
-                    initial={{opacity:0, height:0}}
-                    animate={{opacity:1, height:'auto'}}
-                    exit={{opacity:0, height:0}}
-                    transition={{duration:0.3}}
-                    className="question-text-wrapper caption">
-                    {props.text}
-                </motion.div>
+                    <motion.div
+                        initial={{opacity:0, height:0}}
+                        animate={{opacity:1, height:'auto'}}
+                        exit={{opacity:0, height:0}}
+                        className="question-text-wrapper caption">
+                        {props.text}
+                    </motion.div>
             }  
             </AnimatePresence>
         </div>
         <div className="question-btn-wrapper" onClick={() => (handleOnUpdate())}><OrangeBtn text={'Update'}></OrangeBtn></div>
         <div className="btn-wrapper" onClick={() => (handleDeleteQuestion(props.id))}><BlackButton text={'Delete'}></BlackButton></div></>}
-        <AnimatePresence>
         {isUpdate && <>
-                <motion.div initial={{x:400, opacity:0}} animate={{x: 0, opacity:1}} transition={{duration:0.8} } className="black-btn-decline-wrapper">
-                    <div onClick={() => (handleDecline([setIsUpdate,setTextIsValid,setTitleIsValid,setText,setTitle]))} className="btn-wrapper"><BlackButton  text={'Decline'}></BlackButton></div>
+                <motion.div initial={{x:400, opacity:0}} animate={{x: 0, opacity:1}} exit={{x:-400, opacity:0}} transition={{duration:0.3} } className="black-btn-decline-wrapper">
+                    <div onClick={() => (handleDecline([setTextIsValid,setTitleIsValid,setText,setTitle],setIsUpdate))} className="btn-wrapper"><BlackButton  text={'Decline'}></BlackButton></div>
                     <form className='form-item-wrapper' action="">
                         {titleIsValid || <h1>Title isn`t valid, title should has only 50 chars</h1>}
-                        <input onChange={(e) => handleTitleOnChage(e)} className='white-input' defaultValue={props.title} type="text" placeholder='Title' />
+                        <Inputitem type={'text'} defaultValue={props.title} placeholder={'Title'} setFunc={handleTitleOnChage}/>
                         <div className="input-item"><textarea onChange={(e) => handleTextOnChange(e)} className='text-area' defaultValue={props.text}  cols="75" rows="3" placeholder='Text'></textarea></div>
                         {textIsValid || <h1>Text isn`t valid, text should has only 500 chars</h1>}
                     </form>
                     <div className="btn-wrapper btn-wrapper-create-question" onClick={() => (handleUpdateQuestion(props.id))} ><OrangeBtn text={'Update'} /></div>
                 </motion.div>
         </>}
-        </AnimatePresence>
         </div>
        </>
     )

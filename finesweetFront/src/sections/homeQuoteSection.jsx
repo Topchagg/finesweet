@@ -29,9 +29,6 @@ function HomeQuoteSection() {
                         </div>
                         <div className="input-form-wrapper">
                         <RequestForm/>
-                            <div className="btn-quote-wrapper">
-                                    <OrangeBtn text={'Contact with me'}/>
-                            </div>
                         </div>
                     </div>
                 </div>        

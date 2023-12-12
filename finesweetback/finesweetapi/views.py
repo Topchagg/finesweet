@@ -25,10 +25,14 @@ class FrequentlyQuestionViewSet(ModelViewSet):
 
 
 class EmployeeViewSet(ModelViewSet):
-    queryset = Employee
+    queryset = Employee.objects.all()
     serializer_class = SerializeEmployee
 
 class ContactViewSet(ModelViewSet):
-    queryset = ContactRequest
+    queryset = ContactRequest.objects.all()
     serializer_class = SerializeContactRequest
+
+class BrandsViewSet(ModelViewSet):
+    queryset = Brands.objects.all()
+    serializer_class = SerializeBrands
     

@@ -47,11 +47,20 @@ class SerializeEmployee(ModelSerializer):
     class Meta:
 
         model = Employee
-        fields = ['image','name','position']
+        fields = ['image','name','position','pk']
+        read_only_fields = ['pk']
 
 class SerializeContactRequest(ModelSerializer):
 
     class Meta:
         model = ContactRequest
-        fields = ['pk','fullname','phoneNumber','email','message']
+        fields = ['pk','fullname','phoneNumber','message']
+        read_only_fields = ['pk']
+
+
+class SerializeBrands(ModelSerializer):
+
+    class Meta:
+        model = Brands
+        fields = ['pk','name','icon']
         read_only_fields = ['pk']

@@ -2,7 +2,7 @@ import '../styles/blackbutton.css'
 
 function BlackButton (props) {
     return (
-        <button className='black-btn'>{props.text}</button>
+        <button type="button" className='black-btn'>{props.text}</button>
     )
 }
 
