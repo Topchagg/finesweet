@@ -31,6 +31,15 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.title-margin {
+    margin-top: 58px;
+}
+
+.txt-margin {
+    margin-top: 24px;
 }
 
 .header-one {

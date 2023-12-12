@@ -17,3 +17,9 @@ export async function deleteImg(img) {
     await deleteObject(fileRef)
    })
 }
+
+export async function updateImg(oldImg, newImg){
+    await deleteImg(oldImg);
+    const imgUrl = await downloadImgTo(newImg);
+    return imgUrl;
+}

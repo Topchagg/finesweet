@@ -1,0 +1,41 @@
+.create-service-item {
+    height: auto;
+    padding: 30px;
+    width: 100%;
+    border: solid black 1px;
+}
+
+.service-form-wrapper {
+    margin-top: 100px;
+}
+
+.image-download-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-wrapper-middle {
+    margin-left: 330px;
+}
+
+.input-wrappers {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-input {
+    width: 570px;
+    height: 500px;
+    border: solid gray 3px;
+}
+
+.input-quote-text-wrapper {
+    margin-left: 340px;
+}
+
+.quote-input {
+    width: 570px;
+    height: 215px;
+}

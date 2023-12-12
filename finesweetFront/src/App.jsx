@@ -5,6 +5,7 @@ import HomePage from './pages/homePage'
 import ServicesPage from './pages/servicesPage'
 import AboutUsPage from './pages/aboutUsPage'
 import ContactPage from './pages/contactPage'
+import SingleServicePage from './pages/singleServicePage'
 
 import './styles/variabalse.css'
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="services" element={<ServicesPage/>}  />
         <Route path="contact" element={<ContactPage/>} />
         <Route path="about-us" element={<AboutUsPage/>} />
+        <Route path="service-page" element={<SingleServicePage/>}  />
       </Route>
     </Routes>
   )

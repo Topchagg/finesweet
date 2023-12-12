@@ -23,7 +23,6 @@ class FrequentlyQuestionViewSet(ModelViewSet):
     queryset = FrequentlyQuestion.objects.all()
     serializer_class = SerializeFrequentlyQuestions
 
-
 class EmployeeViewSet(ModelViewSet):
     queryset = Employee.objects.all()
     serializer_class = SerializeEmployee
