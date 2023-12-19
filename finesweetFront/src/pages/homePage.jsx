@@ -9,6 +9,8 @@ import HomeCommentSection from "../sections/homeCommentSection"
 import HomeQuestionSection from "../sections/homeQuestionsSection"
 
 
+
+
 import '../styles/variabalse.css'
 
 function HomePage(){

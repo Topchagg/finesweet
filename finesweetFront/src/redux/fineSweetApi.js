@@ -67,7 +67,33 @@ export const fineSweetApi = createApi({
                 method: 'DELETE'
             })
         }),
-    }) 
+        createService: build.mutation({
+            query:(data) => ({
+                url:'services-create',
+                method: 'POST',
+                body:data
+            })
+        }),
+        getAllService: build.query({
+            query: () => "services-get-all"
+        }),
+        getOneService: build.query({
+            query: (pk) => `services-get-one/${pk}`
+        }),
+        updateService: build.mutation({
+            query: (data) => ({
+                url: `services-full-update/${data.id}`,
+                method: 'PUT',
+                body: data.body
+            })
+        }),
+        deleteService: build.mutation({
+            query: (id) =>  ({
+                url: `services-destroy/${id}`,
+                method: 'DELETE'
+            })
+        })
+    })
 })
 
-export const { useDeleteServBrandMutation,useGetAllServBrandQuery,useDeleteEmployeeBlockMutation , useGetAllEmployeeBlockQuery , useCreateEmployeeBlockMutation ,useGetQuestionsQuery, useAddQuestionMutation, useDeleteQuestionMutation, useUpdateQuestionMutation, useCreateContactRequestMutation, useCreateServBrandMutation} = fineSweetApi
+export const {useDeleteServiceMutation,useUpdateServiceMutation,useGetOneServiceQuery ,useGetAllServiceQuery ,useCreateServiceMutation,useDeleteServBrandMutation,useGetAllServBrandQuery,useDeleteEmployeeBlockMutation , useGetAllEmployeeBlockQuery , useCreateEmployeeBlockMutation ,useGetQuestionsQuery, useAddQuestionMutation, useDeleteQuestionMutation, useUpdateQuestionMutation, useCreateContactRequestMutation, useCreateServBrandMutation} = fineSweetApi

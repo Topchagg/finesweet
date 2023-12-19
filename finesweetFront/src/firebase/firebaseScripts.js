@@ -18,8 +18,13 @@ export async function deleteImg(img) {
    })
 }
 
-export async function updateImg(oldImg, newImg){
-    await deleteImg(oldImg);
-    const imgUrl = await downloadImgTo(newImg);
-    return imgUrl;
+export async function updateImg(oldImg, newImg, folderName){
+    if(oldImg === newImg){
+        return oldImg;
+    }
+    else {
+        await deleteImg(oldImg);
+        const imgUrl = await downloadImgTo(newImg, folderName);
+        return imgUrl;
+    }
 }

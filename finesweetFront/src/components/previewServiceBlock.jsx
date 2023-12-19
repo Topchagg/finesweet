@@ -1,15 +1,24 @@
+import { useState } from 'react'
+import { motion } from 'framer-motion'
 import '../styles/PreviewServiceBlock.css'
+import { Link } from 'react-router-dom'
 
-function PreviewServiceBlock () {
+function PreviewServiceBlock (props) {
+
+    const  [isHover, setIsHover] = useState(false)
+
     return (
-        <div className="preview-service-block">
+       <Link to={"/service-page/" + props.slug}>
+        <div className="preview-service-block" onMouseEnter={() => (setIsHover(!isHover))} onMouseLeave={() => (setIsHover(!isHover))} >
             <div className="service-block-icon-wrapper">
-                <img className='service-icon' src="" alt="" />
+                {isHover || <motion.div  initial={{opacity:1}} animate={{opacity:1}} transition={{duration:400}} className="icon-wrapper"><img className='service-icon' src={props.icon} alt="" /></motion.div> }
+                {isHover && <div className="icon-wrapper"><img  className='service-icon' src={props.hoverIcon} alt="" /></div> }
             </div>  
             <div className="service-block-txt-wrapper title-two">
-                Engine repair
+                {props.name}
             </div>
         </div>
+        </Link>
     )
 }
 

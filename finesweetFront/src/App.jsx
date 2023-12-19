@@ -9,9 +9,15 @@ import SingleServicePage from './pages/singleServicePage'
 
 import './styles/variabalse.css'
 
-function App() {
- 
+import { useGetAllServiceQuery } from "../src/redux/fineSweetApi"
 
+
+
+function App() {
+const {data = [], isLoading } = useGetAllServiceQuery();
+    
+localStorage.setItem('serviceItems', JSON.stringify(data))  
+  
   return (
     <Routes>
       <Route path='/' element={<Layout/>}>
@@ -19,7 +25,7 @@ function App() {
         <Route path="services" element={<ServicesPage/>}  />
         <Route path="contact" element={<ContactPage/>} />
         <Route path="about-us" element={<AboutUsPage/>} />
-        <Route path="service-page" element={<SingleServicePage/>}  />
+        <Route path="service-page/:slug" element={<SingleServicePage/>}/>
       </Route>
     </Routes>
   )

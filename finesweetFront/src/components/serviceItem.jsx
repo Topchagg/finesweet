@@ -1,13 +1,43 @@
 import PreviewServiceBlock from './previewServiceBlock'
+import OrangeBtn from './orangeButton'
 
 
 import '../styles/serviceItem.css'
+import { deleteImg } from '../firebase/firebaseScripts'
+import { useState } from 'react'
+import CreateServiceItem from './createServiceItem'
+import { useDeleteServiceMutation } from '../redux/fineSweetApi'
 
-function ServiceItem() {
+function ServiceItem(props) {
+
+    const [isCreate, setIsCreate] = useState(false)
+    const [isUpdate, setIsUpdate] = useState(false)
+    const [destroyService] = useDeleteServiceMutation();
+
+    async function handleDestroy(id) {
+        await destroyService(id)
+        await deleteImg(props.img)
+        await deleteImg(props.icon)
+        await deleteImg(props.activeIcon)
+        window.location.reload();
+    }
+
+    if(isCreate) {
+        return (
+            <CreateServiceItem isUpdate={isUpdate} setIsCreate={() => (setIsCreate(!isCreate))} />
+        )
+    }
+    if (isUpdate){
+        return (
+            <CreateServiceItem id={props.id} img={props.img} activeIcon={props.activeIcon} icon={props.icon} previewText={props.previewText} quote={props.quote} name={props.name} mainText={props.mainText} mainTitle={props.mainTitle} subTitle={props.subTitle} subText={props.subText}  isUpdate={isUpdate} setIsUpdate={setIsUpdate} />
+        )
+    }
+
+
     return (
         <div className="service-item-wrapper">
             <div className="title-of-service header-one">
-                Auto diagnostic
+                {props.name}
             </div>
             <div className="service-info-wrapper">
                 <div className="other-info-wrapper title-margin">
@@ -31,29 +61,32 @@ function ServiceItem() {
                 </div>
                 <div className="main-info-wrapper title-margin">
                     <div className="img-wrapper">
-                        <img className='service-img' src="" alt="" />
+                        <img className='service-img' src={props.img} alt="" />
                     </div>
                     <div className="start-title header-four title-margin">
-                        The warning lights on your dashboard are the most obvious starting point.
+                        {props.mainTitle}
                     </div>
                     <div className="main-service-text txt-margin  caption">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dignissim dolor et dui bibendum aliquam. Mauris a quam sit amet dui auctor dictum eget a elit. Pellentesque varius diam risus, ut condimentum lorem volutpat vel. Nam vel orci pharetra eros pulvinar cursus nec quis tellus. Quisque feugiat tortor lectus, pretium interdum justo tincidunt a. Donec at congue lectus. Nulla facilisi. Phasellus consectetur sapien accumsan lectus tincidunt placerat. Etiam ornare nibh vel dui egestas, eu posuere metus convallis.
-                        <br></br> <br></br>
-                        Ut non urna a odio condimentum dictum. Proin egestas erat a orci ultrices, vitae bibendum libero posuere. Quisque laoreet tincidunt justo. Vestibulum congue dictum libero finibus vehicula. Aliquam nisi velit, ultricies eget enim vel, venenatis mollis ante. Maecenas sodales tristique quam. Suspendisse fringilla massa vel dolor ornare rhoncus. Nullam ut orci mattis leo varius laoreet sed mollis dui. Aenean placerat nec enim ut finibus. Maecenas suscipit nibh eu neque egestas, non condimentum mi bibendum. Sed est eros, molestie consectetur auctor non, lobortis quis tortor. Nam cursus imperdiet massa volutpat hendrerit. Sed suscipit ligula iaculis lorem sagittis tincidunt. Etiam pellentesque metus vel enim iaculis aliquam. Mauris at nisi sed elit gravida malesuada.
+                       {props.mainText}
                     </div>
                     <div className="sub-service-title title-one title-margin">
-                        Delaying a diagnosis and repair could lead to even bigger problems down the road.
+                        {props.subTitle}
                     </div>
                     <div className="sub-service-text caption txt-margin">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dignissim dolor et dui bibendum aliquam. Mauris a quam sit amet dui auctor dictum eget a elit. Pellentesque varius diam risus, ut condimentum lorem volutpat vel. Nam vel orci pharetra eros pulvinar cursus nec quis tellus. Quisque feugiat tortor lectus, pretium interdum justo tincidunt a. Donec at congue lectus. Nulla facilisi. Phasellus consectetur sapien accumsan lectus tincidunt placerat. Etiam ornare nibh vel dui egestas, eu posuere metus convallis.
+                        {props.subText}
                     </div>
                     <div className="quote-wrapper txt-margin">
                         <img className='line' src="Line.png" alt="" />
                         <div className="quote-txt-wrapper caption">
-                        Ut non urna a odio condimentum dictum. Proin egestas erat a orci ultrices, vitae bibendum libero posuere. Quisque laoreet tincidunt justo. Vestibulum congue dictum libero finibus vehicula. Aliquam nisi velit, ultricies eget enim vel, venenatis mollis ante.
+                        {props.quote}
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="buttons-wrapper">
+                <div onClick={() => (setIsUpdate(!isUpdate))}><OrangeBtn text={'Update'}/></div>
+                <div onClick={() => (setIsCreate(!isCreate))}><OrangeBtn text={'Create new'}/></div>
+                <div onClick={() => (handleDestroy(props.id))}><OrangeBtn text={'Delete'}/></div>
             </div>
         </div>
     )

@@ -12,7 +12,7 @@
 .image-download-wrapper {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    margin-left: -70px;
 }
 
 .input-wrapper-middle {

@@ -1,6 +1,8 @@
 from django.db import models
 from autoslug import AutoSlugField
-
+from django.db.models.signals import pre_save
+from django.dispatch import receiver
+from django.utils.text import slugify
 
 
 class FrequentlyQuestion(models.Model):
@@ -19,7 +21,7 @@ class Services(models.Model):
       
       name = models.CharField(max_length=50)
       mainImage = models.URLField(blank=True)
-      mainTitle = models.CharField(max_length=50, blank=True)
+      mainTitle = models.CharField(max_length=130, blank=True)
       mainText = models.CharField(max_length=1500, blank=True)
       subTitle = models.CharField(max_length=130, blank=True)
       subText = models.CharField(max_length=750, blank=True)
@@ -27,17 +29,11 @@ class Services(models.Model):
       previewText = models.CharField(max_length=250, blank=True) 
       previewIcon = models.URLField(blank=True)
       hoverPreviewIcon = models.URLField(blank=True)
-      slug = AutoSlugField(populate_from='name')
+      slug = AutoSlugField(populate_from='name', unique=True)      
 
-
-
-class ServicesPreview(models.Model):
-      
-      name = models.CharField(max_length=50)
-      previewText = models.CharField(max_length=250, blank=True) 
-      previewIcon = models.URLField(blank=True)
-      hoverPreviewIcon = models.URLField(blank=True)
-    
+@receiver(pre_save, sender=Services)
+def update_slug(sender, instance, **kwargs):
+    instance.slug = slugify(instance.name)
 
 class Employee(models.Model):
       

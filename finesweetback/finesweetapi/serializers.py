@@ -8,32 +8,8 @@ class SerializeService(ModelSerializer):
 
     class Meta:
         model = Services
-        fields = ['name','mainImage','mainTitle','mainText','subTitle','subText','quotation','previewText','previewIcon','hoverPreviewIcon','slug']
-        read_only_fields = ['slug']
-
-    def create(self, validatedData):
-        previewData = {'name': validatedData['name'],
-                       'previewText': validatedData['previewText'],
-                       'previewIcon': validatedData['previewIcon'],
-                       'hoverPreviewIcon': validatedData['hoverPreviewIcon']}
-
-        previewInstance = ServicesPreview.objects.create(**previewData)
-
-        services = Services.objects.create(**validatedData)
-        return services
-
-class SerializeServicePreview(ModelSerializer):
-    
-    class Meta: 
-        model = ServicesPreview
-        fields = ['name','previewText','previewIcon','hoverPreviewIcon','slug']
-        read_only_fields = ['slug']
-
-    def create(self, validatedData):
-        servicesPreviewInstance = ServicesPreview.objects.create(**validatedData)
-        return servicesPreviewInstance
-    
-
+        fields = ['pk','name','mainImage','mainTitle','mainText','subTitle','subText','quotation','previewText','previewIcon','hoverPreviewIcon','slug']
+        read_only_fields = ['slug','pk']
 
 class SerializeFrequentlyQuestions(ModelSerializer):
 
