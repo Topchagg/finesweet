@@ -73,4 +73,10 @@
     margin: 25px;
     width: 170px;
     height: 130px;
+    background-color: white;
+}
+
+.service-block-wrapper:first-of-type {
+    background-color: #FF6433;
+    transform: scale(1.2);
 }

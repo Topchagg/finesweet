@@ -8,8 +8,12 @@ import { useState } from 'react'
 import CreateServiceItem from './createServiceItem'
 import { useDeleteServiceMutation } from '../redux/fineSweetApi'
 
+
+
 function ServiceItem(props) {
 
+    let services = JSON.parse(localStorage.getItem('serviceItems')) || [];
+    services = services.filter(item => item.name !== props.name)
     const [isCreate, setIsCreate] = useState(false)
     const [isUpdate, setIsUpdate] = useState(false)
     const [destroyService] = useDeleteServiceMutation();
@@ -45,17 +49,13 @@ function ServiceItem(props) {
                         <div className="title-other-service title-one">
                             Other service
                             <div className="service-block-wrapper">
-                                <PreviewServiceBlock/>
+                                <PreviewServiceBlock icon={props.icon} hoverIcon={props.activeIcon} name={props.name}/>
                             </div>
-                            <div className="service-block-wrapper">
-                                <PreviewServiceBlock/>
-                            </div>
-                            <div className="service-block-wrapper">
-                                <PreviewServiceBlock/>
-                            </div>
-                            <div className="service-block-wrapper">
-                                <PreviewServiceBlock/>
-                            </div>
+                            {services.slice(0,3).map((preview, index) => (
+                                <div className="service-block-wrapper">
+                                    <PreviewServiceBlock  key={index} icon={preview.previewIcon} hoverIcon={preview.hoverPreviewIcon} name={preview.name} slug={preview.slug} />
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>

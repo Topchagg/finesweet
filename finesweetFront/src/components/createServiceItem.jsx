@@ -82,6 +82,8 @@ async function handleSubmit(Update, id){
                 'hoverPreviewIcon': hoverIconUrl
             }
             await createService(data);
+            const slug = slugify(data.name, { lower: true });
+            navigate(`/service-page/${slug}`)
             window.location.reload();
         }
 }

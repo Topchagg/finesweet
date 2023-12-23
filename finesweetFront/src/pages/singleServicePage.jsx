@@ -6,18 +6,8 @@ import { useGetOneServiceQuery } from "../redux/fineSweetApi"
 function SingleServicePage() {
 
     const {slug} = useParams();
-    const services = JSON.parse(localStorage.getItem('serviceItems'));
- 
-        let pk;
 
-        for(let i in services){
-            if(slug === services[i].slug){
-                pk = services[i].pk
-                break;
-            }
-        }
-
-        const {data = []} = useGetOneServiceQuery(pk);
+    const {data = []} = useGetOneServiceQuery(slug);
     
 
     return (

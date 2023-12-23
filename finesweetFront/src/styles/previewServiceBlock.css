@@ -1,16 +1,17 @@
 .preview-service-block {
-    border: solid red 1px;
-    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
     width: 100%;
     transition: 400ms;
-
 }
 
 .preview-service-block:hover {
     color: white;
     cursor: pointer;
     background-color: #FF6433;
+    transform: scale(1.05);
 }
 
 .service-block-icon-wrapper {
@@ -25,4 +26,8 @@
     width: 100%;
     margin-top: 15px;
     text-align: center;
+}
+
+.service-block-content {
+    margin-top: -40px;
 }

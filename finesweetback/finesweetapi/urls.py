@@ -8,7 +8,7 @@ from .views import *
 urlpatterns = [
     path('services-get-all', ServicesViewSet.as_view({'get':'list'})),
     path('services-create', ServicesViewSet.as_view({'post':'create'})),
-    path('services-get-one/<int:pk>', ServicesViewSet.as_view({'get':'retrieve'})),
+    path('services-get-one/<slug:slug>', ServicesViewSet.as_view({'get':'retrieve'})),
     path('services-destroy/<int:pk>', ServicesViewSet.as_view({'delete': 'destroy'})),
     path('services-full-update/<int:pk>', ServicesViewSet.as_view({'put':'update'})),
 
